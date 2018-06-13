@@ -3,6 +3,7 @@ This is a simple single-player game, Teris
 
 这个游戏的目录很简单：
 index.html   ------- 游戏的页面架构
+
 style.css    ------- 游戏的表现层，页面所有样式的渲染
 js           ------- 游戏的行为层，各种操作的逻辑架构
 --square.js               ---- 定义生成方块的基本属性和方法
