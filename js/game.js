@@ -46,45 +46,13 @@ var Game = function() {
                 newNode.className = 'none';
                 newNode.style.top = (i*20) + 'px';
                 newNode.style.left = (j*20) + 'px';
-                newNode.style.backgroundColor = getBackgroundColor();
                 container.appendChild(newNode);
                 div.push(newNode);
             }
             divs.push(div);
         }
     }
-
-    //
-    function getBackgroundColor () {
-
-        var num = Math.floor(Math.random()*7)+1;
-
-        var s;
-        switch (num) {
-            case 1:
-                s = "#f2b179";
-                break;
-            case 2:
-                s = "#f65e3b";
-                break;
-            case 3:
-                s = "#f67c5f";
-                break;
-            case 4:
-                s = "#edcc61";
-                break;
-            case 5:
-                s = "#9c0";
-                break;
-            case 6:
-                s = "#09c";
-                break;
-            case 7:
-                s = "#a6c";
-                break;
-        }
-        this.color = s;
-    }
+    
     //刷新DIV
     var refreshDiv = function(data, divs) {
         for(var i = 0; i < data.length; i++) {
@@ -99,9 +67,6 @@ var Game = function() {
             }
         }
     }
-
-
-
 
     // 方块移动到底部，固定
     var fixed = function() {
@@ -215,12 +180,9 @@ var Game = function() {
         scoreDiv = doms.scoreDiv;
         resultDiv = doms.resultDiv;
 
-        //    var color = Math.floor(Math.random()*7)+1;
         cur = SquareFactory.prototype.make(type, dir);
         next = SquareFactory.prototype.make(type, dir);
-
-        // console.log(cur);
-
+        
         initDiv(gameDiv, gameData, gameDivs);
         initDiv(nextDiv, next.data, nextDivs);
         setData()
@@ -273,8 +235,6 @@ var Game = function() {
             for(var j = 0; j < cur.data[0].length; j++) {
                 if (check(cur.origin, i, j)) {
                     gameData[cur.origin.x + i][cur.origin.y + j] = cur.data[i][j];
-                    // cur.getBackgroundColor();
-
                 }
             }
         }
