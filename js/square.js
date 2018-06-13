@@ -73,34 +73,3 @@ Square.prototype.canRight = function(isValid) {
 Square.prototype.right = function() {
     this.origin.y = this.origin.y + 1;
 }
-
-Square.prototype.getBackgroundColor = function() {
-
-    var num = Math.floor(Math.random()*7)+1;
-
-    var s;
-    switch (num) {
-        case 1:
-            s = "#f2b179";
-            break;
-        case 2:
-            s = "#f65e3b";
-            break;
-        case 3:
-            s = "#f67c5f";
-            break;
-        case 4:
-            s = "#edcc61";
-            break;
-        case 5:
-            s = "#9c0";
-            break;
-        case 6:
-            s = "#09c";
-            break;
-        case 7:
-            s = "#a6c";
-            break;
-    }
-    this.color = s;
-}
