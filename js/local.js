@@ -11,8 +11,6 @@ var Local = function() {
     var time = 0;
     //绑定键盘事件
     var bindKeyEvent = function() {
-        console.log('local bindKetEvent -- ');
-
         document.onkeydown = function(e) {
             if(e.keyCode == 38) { // up
                 game.rotate();
@@ -82,7 +80,6 @@ var Local = function() {
 
     //开始
     var start = function() {
-        console.log('local start -- ');
         var doms = {
             gameDiv: document.getElementById('local_game'),
             nextDiv: document.getElementById('local_next'),
@@ -112,7 +109,6 @@ var Local = function() {
         }
         document.onkeydown = null;
     }
-
 
     //导出API
     this.start = start;
