@@ -1,7 +1,7 @@
-## This is a simple single-player game, Teris ##
+## This is a simple single-player game, Teris
 这是我做的第一个单机小游戏--俄罗斯方块。俄罗斯方块也是我小时候玩的第一款游戏（在自己家的电视上~。~O(∩_∩)O哈哈~）.
 
-## 这个游戏的目录很简单：<br>##
+## 这个游戏的目录很简单：
 
 >index.html            ------- 游戏的页面架构<br>
 >style.css   ------- 游戏的表现层，页面所有样式的渲染<br>
